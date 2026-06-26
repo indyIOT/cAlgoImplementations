@@ -4,3 +4,6 @@
 [submodule "cMemoryPool"]
 	path = cMemoryPool
 	url = git@github.com:tbandtg/cMemoryPool.git
+[submodule "cErrorDriver"]
+	path = cErrorDriver
+	url = git@github.com:tbandtg/cErrorDriver.git
