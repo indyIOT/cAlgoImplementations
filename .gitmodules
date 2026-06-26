@@ -1,0 +1,6 @@
+[submodule "basicTestApplication"]
+	path = basicTestApplication
+	url = git@github.com:tbandtg/basicTestApplication.git
+[submodule "cMemoryPool"]
+	path = cMemoryPool
+	url = git@github.com:tbandtg/cMemoryPool.git
