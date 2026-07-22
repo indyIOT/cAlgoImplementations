@@ -1,9 +1,24 @@
 [submodule "basicTestApplication"]
-	path = basicTestApplication
-	url = git@github.com:tbandtg/basicTestApplication.git
+    path = basicTestApplication
+    url = git@github.com:tbandtg/basicTestApplication.git
 [submodule "cMemoryPool"]
-	path = cMemoryPool
-	url = git@github.com:tbandtg/cMemoryPool.git
+    path = cMemoryPool
+    url = git@github.com:tbandtg/cMemoryPool.git
 [submodule "cErrorDriver"]
-	path = cErrorDriver
-	url = git@github.com:tbandtg/cErrorDriver.git
+    path = cErrorDriver
+    url = git@github.com:tbandtg/cErrorDriver.git
+[submodule "cCommonMacros"]
+    path = cCommonMacros
+    url = git@github.com:tbandtg/cCommonMacros.git
+[submodule "cLoggingDriver"]
+    path = cLoggingDriver
+    url = git@github.com:tbandtg/cLoggingDriver.git
+[submodule "cCircularBuffer"]
+    path = cCircularBuffer
+    url = git@github.com:tbandtg/cCircularBuffer.git
+[submodule "cSemaphore"]
+    path = cSemaphore
+    url = git@github.com:tbandtg/cSemaphore.git
+[submodule "cCommonTypes"]
+    path = cCommonTypes
+    url = git@github.com:tbandtg/cCommonTypes.git
