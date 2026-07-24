@@ -1,24 +1,24 @@
 [submodule "basicTestApplication"]
     path = basicTestApplication
-    url = git@github.com:tbandtg/basicTestApplication.git
+    url = git@github.com:indyIOT/basicTestApplication.git
 [submodule "cMemoryPool"]
     path = cMemoryPool
-    url = git@github.com:tbandtg/cMemoryPool.git
+    url = git@github.com:indyIOT/cMemoryPool.git
 [submodule "cErrorDriver"]
     path = cErrorDriver
-    url = git@github.com:tbandtg/cErrorDriver.git
+    url = git@github.com:indyIOT/cErrorDriver.git
 [submodule "cCommonMacros"]
     path = cCommonMacros
-    url = git@github.com:tbandtg/cCommonMacros.git
+    url = git@github.com:indyIOT/cCommonMacros.git
 [submodule "cLoggingDriver"]
     path = cLoggingDriver
-    url = git@github.com:tbandtg/cLoggingDriver.git
+    url = git@github.com:indyIOT/cLoggingDriver.git
 [submodule "cCircularBuffer"]
     path = cCircularBuffer
-    url = git@github.com:tbandtg/cCircularBuffer.git
+    url = git@github.com:indyIOT/cCircularBuffer.git
 [submodule "cSemaphore"]
     path = cSemaphore
-    url = git@github.com:tbandtg/cSemaphore.git
+    url = git@github.com:indyIOT/cSemaphore.git
 [submodule "cCommonTypes"]
     path = cCommonTypes
-    url = git@github.com:tbandtg/cCommonTypes.git
+    url = git@github.com:indyIOT/cCommonTypes.git
