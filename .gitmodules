@@ -11,14 +11,14 @@
     path = cCommonMacros
     url = git@github.com:indyIOT/cCommonMacros.git
 [submodule "cLoggingDriver"]
-    path = cLoggingDriver
-    url = git@github.com:indyIOT/cLoggingDriver.git
+	path = cLoggingDriver
+	url = git@github.com:indyIOT/cLoggingDriver.git
 [submodule "cCircularBuffer"]
-    path = cCircularBuffer
-    url = git@github.com:indyIOT/cCircularBuffer.git
+	path = cCircularBuffer
+	url = git@github.com:indyIOT/cCircularBuffer.git
 [submodule "cSemaphore"]
-    path = cSemaphore
-    url = git@github.com:indyIOT/cSemaphore.git
+	path = cSemaphore
+	url = git@github.com:indyIOT/cSemaphore.git
 [submodule "cCommonTypes"]
-    path = cCommonTypes
-    url = git@github.com:indyIOT/cCommonTypes.git
+	path = cCommonTypes
+	url = git@github.com:indyIOT/cCommonTypes.git
