@@ -22,6 +22,6 @@
 [submodule "cCommonTypes"]
 	path = cCommonTypes
 	url = git@github.com:indyIOT/cCommonTypes.git
-[submodule "cIntegritylib"]
-	path = cIntegritylib
-	url = git@github.com:indyIOT/cIntegritylib.git
+[submodule "cIntegrityDriver"]
+	path = cIntegrityDriver
+	url = git@github.com:indyIOT/cIntegrityDriver.git
