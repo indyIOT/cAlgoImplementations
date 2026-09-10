@@ -1,0 +1,200 @@
+Coding C Programming
+File Structure and Headers
+File Header Format:
+c/**********************************************************************************
+ * @file filename.h
+ * @brief Brief description
+ * @author Anthony Garza
+ * @date YYYY-MM-DD (use 2025-09-04 if no date provided)
+ * @details Detailed description line 1
+ * @details This implementation is designed to work with the Raspberry Pi Pico and the C programming language.
+ * @copyright Copyright (c) 2025 DeviceIQ. All rights reserved.
+ */
+Include Guards and C++ Compatibility (Required Order):
+c#ifndef HEADER_NAME_H
+#define HEADER_NAME_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// Content here
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* HEADER_NAME_H */
+Section Organization
+Use standard section separators:
+c/*============================================================================
+ * SECTION NAME
+ *============================================================================*/
+Standard section order:
+
+INCLUDES
+CONSTANTS AND DEFINITIONS / DEFINES AND CONSTANTS
+TYPES AND STRUCTURES / ENUMERATION DEFINITIONS
+PUBLIC FUNCTION PROTOTYPES (organized by functional groups)
+
+Code Formatting
+Braces: Allman style - braces always on new lines
+cif ( condition )
+{
+    // code
+}
+
+typedef struct
+{
+    int member;
+} sStructName_t;
+Spacing Rules:
+
+Space after control keywords (if, while, for, switch)
+Space after opening parenthesis ( and before closing parenthesis )
+Spaces around all binary operators (==, !=, <, >, +, -, *, /, =)
+Exception: No spaces inside square brackets []
+
+cif ( x == 0 )
+while ( ( i < MAX ) && ( j > MIN ) )
+function( param1, param2 )
+array[index]  // No spaces in brackets
+Indentation:
+
+Spaces only, never tabs
+Consistent indentation (typically 4 spaces per level)
+
+No trailing whitespace on lines
+Naming Conventions
+Variables and Functions: camelCase
+cint variableName;
+void functionName( void );
+Type Naming with Prefixes:
+
+s prefix for structs: sStructName_t
+e prefix for enums: eEnumName_t
+i prefix for integers: iCustomInt_t
+p prefix for pointers: pCustomPointer_t
+
+Acronyms: Must be consistent within each file - either all uppercase or all lowercase
+c// Good - consistent lowercase
+sDhcpServer_t, sDhcpMessage_t
+
+// Or good - consistent uppercase  
+sDHCPServer_t, sDHCPMessage_t
+
+// Bad - inconsistent mixing
+sDHCPServer_t, sDhcpMessage_t
+Pointer Style
+Consistent pointer formatting:
+
+int * ptr (space before and after asterisk)
+int const * ptr (const after type)
+int const * const ptr (both const qualifiers)
+
+Constants and Magic Numbers
+No magic numbers except zero:
+
+All numeric literals (except 0) must be named constants
+Use #define or const declarations
+Zero is acceptable as it's universally understood
+
+c// Good
+#define MAX_BUFFER_SIZE     256
+#define DEFAULT_TIMEOUT_MS  1000
+if ( count < MAX_BUFFER_SIZE )
+
+// Bad  
+if ( count < 256 )  // Magic number
+delay( 1000 );      // Magic number
+
+// Acceptable
+if ( ptr == NULL )  // 0/NULL is OK
+for ( i = 0; i < max; i++ )  // 0 is OK
+Control Flow
+No Early Exits: Functions should have single return point at the end
+csErrorStruct_t function( void )
+{
+    sErrorStruct_t retValue = BLANK_ERROR_STRUCT;
+    
+    if ( condition )
+    {
+        retValue = CREATE_ERROR( ERROR_CODE );
+    }
+    else
+    {
+        // do work
+    }
+    
+    return retValue;  // Single exit point
+}
+Documentation
+All functions must have Doxygen-compatible documentation in both header and implementation:
+Header file (.h):
+c/**
+ * @brief Brief description of function purpose
+ * 
+ * @param paramName Description of parameter
+ * @param data      Pointer to data buffer
+ * @param length    Length of data in bytes
+ * 
+ * @return sErrorStruct_t Error structure indicating result
+ * 
+ * @note Additional important information
+ * @warning Critical warnings about usage
+ */
+sErrorStruct_t functionName( type * const paramName, uint8_t const * const data, size_t const length );
+One blank line at the end of the file
+Implementation file (.c):
+c/**
+ * @brief Brief description of function purpose
+ * 
+ * @param paramName Description of parameter
+ * @param data      Pointer to data buffer
+ * @param length    Length of data in bytes
+ * 
+ * @return sErrorStruct_t Error structure indicating result
+ * 
+ * @note Additional important information
+ * @warning Critical warnings about usage
+ */
+sErrorStruct_t functionName( type * const paramName, uint8_t const * const data, size_t const length )
+{
+    // Implementation
+}
+Section Organization
+Use standard section separators:
+c/*============================================================================
+ * SECTION NAME
+ *============================================================================*/
+Standard section order:
+
+INCLUDES
+CONSTANTS AND DEFINITIONS / DEFINES AND CONSTANTS
+TYPES AND STRUCTURES / ENUMERATION DEFINITIONS
+STATIC VARIABLES
+STATIC FUNCTION PROTOTYPES
+PUBLIC FUNCTION IMPLEMENTATIONS (organized by functional groups)
+STATIC FUNCTION IMPLEMENTATIONS (organized by functional groups)
+INTERRUPT FUNCTION IMPLEMENTATIONS
+
+Comments: Use /* */ style only, not //
+vervbose commenting.
+
+Assume the guy coming after us is a 4th grade reading level, <<<Mostly a joke but not comepletely
+Key Rules Summary
+
+Include guards and C++ compatibility guards are mandatory for all header files
+Use #current Date as date for files missing dates
+Maintain consistent formatting and comprehensive documentation
+All functions require identical Doxygen documentation above both prototype AND implementation
+Single return point per function - no early exits
+Spaces only for indentation, no tabs
+No trailing whitespace on lines
+Acronym capitalization must be consistent within each file
+No magic numbers except zero - all numeric literals must be named constants
+One blank line at the end of the file
+Static Variables should be file scope
+Function stack variables should be function scope.
+All variables should be initialized at creation unless it is a corner case where more flash will be used to do so.  
+If that is the case they should be memset if need be. 
