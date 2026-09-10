@@ -25,3 +25,6 @@
 [submodule "cIntegrityDriver"]
 	path = cIntegrityDriver
 	url = git@github.com:indyIOT/cIntegrityDriver.git
+[submodule "projectTools"]
+	path = projectTools
+	url = git@github.com:indyIOT/projectTools.git
