@@ -16,9 +16,6 @@
 [submodule "cCircularBufferDriver"]
 	path = cCircularBufferDriver
 	url = git@github.com:indyIOT/cCircularBufferDriver.git
-[submodule "cSemaphoreDriver"]
-	path = cSemaphoreDriver
-	url = git@github.com:indyIOT/cSemaphoreDriver.git
 [submodule "cCommonTypes"]
 	path = cCommonTypes
 	url = git@github.com:indyIOT/cCommonTypes.git
@@ -28,3 +25,6 @@
 [submodule "projectTools"]
 	path = projectTools
 	url = git@github.com:indyIOT/projectTools.git
+[submodule "cMutexDriver"]
+	path = cMutexDriver
+	url = git@github.com:indyIOT/cMutexDriver.git
